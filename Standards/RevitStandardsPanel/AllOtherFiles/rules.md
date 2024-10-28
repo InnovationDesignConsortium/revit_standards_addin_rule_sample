@@ -1,4 +1,59 @@
 # Sample Rule Documentation
+## Here is a Workset Rule
+Elements from the categories:
+- Furniture
+- Entourage
+Will be moved to the workset:
+- Level 1 Stuff
+When they have a Level value of:
+- Level 1
+
+```json
+{
+  "Workset Rules":
+  [
+    {
+      "Categories": ["Furniture", "Entourage"],
+      "Workset": "Level 1 Stuff",
+      "Parameters":
+      [
+        {"Name": "Level", "Value": "Level 1"},
+        {"Name": "Auto Assign Workset", "Value": "1"}
+      ]
+    }
+  ]
+}
+```
+
+## Here's a second Workset Rule
+Elements from the categories:
+- Furniture
+- Entourage
+Will be moved to the workset:
+- Level 2 Stuff
+When they have a Level value of:
+- Level 2
+
+```json
+{
+  "Workset Rules":
+  [
+    {
+      "Categories": ["Furniture", "Entourage"],
+      "Workset": "Level 2 Stuff",
+      "Parameters":
+      [
+        {"Name": "Level", "Value": "Level 2"},
+        {"Name": "Auto Assign Workset", "Value": "1"}
+      ]
+    }
+  ]
+}
+```
+
+## Below is a Parameter Rule
+
+- This first rule limits the _Comments_ parameter on all elements in the **Walls** category to values of either 1, 2, or 3
 
 ```json
 {
@@ -18,6 +73,18 @@
         {"name": "3", "description": ""}
       ]
     },
+  ]
+}
+```
+
+## This is also a Parameter Rule...
+
+- description here
+
+```json
+{
+  "Parameter Rules": 
+  [
     {
       "Rule Name": "In Place Family Quantity",
       "Element Classes": [
