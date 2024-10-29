@@ -1,4 +1,5 @@
 # Sample Rule Documentation
+
 ## Workset Rule - Levels and Grids
 This rule will enforce keeping Levels and Grids on the default Shared Levels and Grids workset. Notice that when no parameters are specified, all elements of the specified categories are captured by this rule.
 
@@ -9,14 +10,13 @@ This rule will enforce keeping Levels and Grids on the default Shared Levels and
     {
       "Categories": ["Levels", "Grids"],
       "Workset": "Shared Levels and Grids",
-      "Parameters": [],
-      "When run": ["Save"]
+      "Parameters": []
     }
   ]
 }
 ```
 
-## Here is a Workset Rule
+## Workset Rule - Level 1 Stuff (Furniture and Entourage)
 Elements from the categories:
 - Furniture
 - Entourage
@@ -42,7 +42,7 @@ When they have a Level value of:
 }
 ```
 
-## Here's a second Workset Rule
+## Workset Rule - Level 2 Stuff (Furniture and Entourage)
 Elements from the categories:
 - Furniture
 - Entourage
@@ -68,8 +68,7 @@ When they have a Level value of:
 }
 ```
 
-## Below is a Parameter Rule
-
+## Parameter Rule - Wall Comments List
 - This first rule limits the _Comments_ parameter on all elements in the **Walls** category to values of either 1, 2, or 3
 
 ```json
@@ -92,9 +91,8 @@ When they have a Level value of:
 }
 ```
 
-## This is also a Parameter Rule...
-
-- description here
+## Parameter Rule - In-Place Family Max
+- This custom rule limits the number of in-place families allowed in the project
 
 ```json
 {
@@ -105,7 +103,18 @@ When they have a Level value of:
       "Element Classes": ["Autodesk.Revit.DB.FamilyInstance"],
       "Custom Code": "InPlaceFamilyCheck",
       "User Message": "There are too many In-Place Families in the model."
-    },
+    }
+  ]
+}
+```
+
+## Parameter Rule - Set Quadrant
+- This custom rule sets the quadrant of parameter of any family according to where it is in plan.
+
+```json
+{
+  "Parameter Rules":
+  [
     {
       "Rule Name": "Set Quadrant",
       "Element Classes": ["Autodesk.Revit.DB.FamilyInstance"],
