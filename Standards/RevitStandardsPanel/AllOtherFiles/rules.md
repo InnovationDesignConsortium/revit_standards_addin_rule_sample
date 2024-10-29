@@ -1,4 +1,19 @@
 # Sample Rule Documentation
+## Workset Rule - Levels and Grids
+This rule will enforce keeping Levels and Grids on the default Shared Levels and Grids workset
+```json
+{
+  "Workset Rules":
+  [
+    {
+      "Categories": ["Levels", "Grids"],
+      "Workset": "Shared Levels and Grids",
+      "Parameters":[]
+    }
+  ]
+}
+```
+
 ## Here is a Workset Rule
 Elements from the categories:
 - Furniture
