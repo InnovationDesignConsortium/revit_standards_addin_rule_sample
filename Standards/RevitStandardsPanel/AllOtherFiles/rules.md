@@ -9,8 +9,8 @@ This rule will enforce keeping Levels and Grids on the default Shared Levels and
     {
       "Categories": ["Levels", "Grids"],
       "Workset": "Shared Levels and Grids",
-      "Parameters": []
-      "When run": 
+      "Parameters": [],
+      "When run": ["Save"]
     }
   ]
 }
