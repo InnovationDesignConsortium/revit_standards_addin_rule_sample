@@ -20,8 +20,10 @@ This rule will enforce keeping Levels and Grids on the default Shared Levels and
 Elements from the categories:
 - Furniture
 - Entourage
+
 Will be moved to the workset:
 - Level 1 Stuff
+
 When they have a Level value of:
 - Level 1
 
@@ -46,8 +48,10 @@ When they have a Level value of:
 Elements from the categories:
 - Furniture
 - Entourage
+
 Will be moved to the workset:
 - Level 2 Stuff
+
 When they have a Level value of:
 - Level 2
 
