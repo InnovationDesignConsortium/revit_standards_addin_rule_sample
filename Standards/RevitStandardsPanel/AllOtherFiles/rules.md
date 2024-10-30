@@ -17,14 +17,14 @@ This rule will enforce keeping Levels and Grids on the default Shared Levels and
 ```
 
 ## Workset Rule - Level 1 Stuff (Furniture and Entourage)
-Elements from the categories:
+Elements from the _Revit Categories_:
 - Furniture
 - Entourage
 
-Will be moved to the workset:
+Will be moved to the _Workset_:
 - Level 1 Stuff
 
-When they have a Level value of:
+When they have a _Level_ value of:
 - Level 1
 
 ```json
@@ -36,8 +36,37 @@ When they have a Level value of:
       "Workset": "Level 1 Stuff",
       "Parameters":
       [
-        {"Name": "Level", "Value": "Level 1"},
-        {"Name": "Auto Assign Workset", "Value": "1"}
+        {"Name": "Level", "Value": "Level 1"}
+      ]
+    }
+  ]
+}
+```
+
+## Workset Rule - Level 1 Stuff (Walls)
+Elements from the _Revit Category_:
+- Walls
+
+Will be moved to the _Workset_:
+- Level 1 Stuff
+
+When the elements meet multiple requirements. Note that Revit Walls do not have a _Level_ property, so for this rule, we must specify the _Base Constraint_ is:
+- Level 1
+
+And the _Function_ is:
+- Interior
+
+```json
+{
+  "Workset Rules":
+  [
+    {
+      "Categories": ["Walls"],
+      "Workset": "Level 1 Stuff",
+      "Parameters":
+      [
+        {"Name": "Base Constraint", "Value": "Level 1"},
+        {"Name": "Function", "Value": "Interior"}
       ]
     }
   ]
@@ -45,14 +74,14 @@ When they have a Level value of:
 ```
 
 ## Workset Rule - Level 2 Stuff (Furniture and Entourage)
-Elements from the categories:
+Elements from the _Revit Categories_:
 - Furniture
 - Entourage
 
-Will be moved to the workset:
+Will be moved to the _Workset_:
 - Level 2 Stuff
 
-When they have a Level value of:
+When they have a _Level_ value of:
 - Level 2
 
 ```json
