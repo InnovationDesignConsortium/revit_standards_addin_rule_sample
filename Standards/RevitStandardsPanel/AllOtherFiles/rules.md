@@ -105,7 +105,7 @@ When they have a _Level_ value of:
 
 ## Parameter Rules
 
-### List Rules - Wall Comments
+### List Rules
 - The first list rule limits the _Comments_ parameter on all elements in the **Walls** category to values of either 1, 2, or 3. The values are enumerated in the rule.
 - The second list rule ... The values are enumerated in an external CSV file.
 
