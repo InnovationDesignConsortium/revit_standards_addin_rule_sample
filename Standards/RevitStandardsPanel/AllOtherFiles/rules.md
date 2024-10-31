@@ -143,13 +143,28 @@ When they have a _Level_ value of:
 
 ### Key Value Rule - (example)
 
-Description
+- The first rule sets some values for Rooms based on the key values defined in the rule configuration below.
+- The second rule uses an external CSV file to provide the list of parameters and values. Note that this relies on a key value being stored in a Global Parameter
 
 ```json
 {
   "Parameter Rules": 
   [
+  {
+    "Rule Name": "Room Finish Keys",
+      "Categories": ["Rooms"],
+      "Parameter Name": "Room Style",
+      "Driven Parameters": ["Wall Finish", "Floor Finish", "Ceiling Finish"],
+      "Key Values": [
+        ["A", "Wall A", "Floor A", "Ceiling A"],
+        ["B", "Wall B", "Floor B", "Ceiling B"],
+        ["C", "Wall C", "Floor C", "Ceiling C"]
+      ]
+    },
     {
+      "Rule Name": "Code Occupancy",
+      "Categories": ["Rooms"],
+      "Key Value Path": "BuildingCodeOccupancy.csv"
     }
   ]
 }
@@ -240,13 +255,20 @@ Description
 ```
 
 ### Custom Code Rules
-- The first custom code rule limits the number of in-place families allowed in the project. The limit and the logic are defined in the referenced CS file.
-- The second custom code rule sets the value of a parameter on any family according to where it is in plan. The parameter and the logic are defined in the referenced CS file.
+- The first custom code rule is simply a Hello World that shows an empty task dialog.
+- The second custom code rule limits the number of in-place families allowed in the project. The limit and the logic are defined in the referenced CS file.
+- The third custom code rule sets the value of a parameter on any family according to where it is in plan. The parameter and the logic are defined in the referenced CS file.
 
 ```json
 {
   "Parameter Rules": 
   [
+    {
+      "Rule Name": "Hello World",
+      "Element Classes": ["<all>"],
+      "Custom Code": "HelloWorld",
+      "User Message": "Hello World!"
+    },
     {
       "Rule Name": "In Place Family Quantity Limit",
       "Element Classes": ["Autodesk.Revit.DB.FamilyInstance"],
