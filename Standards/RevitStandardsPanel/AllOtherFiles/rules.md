@@ -121,7 +121,7 @@ When they have a _Level_ value of:
       "Rule Name": "Comments Rule For Walls",
       "Categories": ["Walls"],
       "Parameter Name": "Comments",
-      "User Message": "Comments must be 1 2 or 3",
+      "User Message": "Comments must be 1, 2, or 3",
       "List Options":
       [
         {"name": "1", "description": ""},
@@ -130,12 +130,12 @@ When they have a _Level_ value of:
       ]
     },
     {
-      "Rule Name": "... something with a CSV file",
-      "Categories": [],
-      "Parameter Name": "",
+      "Rule Name": "Door Comments from CSV",
+      "Categories": ["Doors"],
+      "Parameter Name": "Comments",
       "Is Value Required": false,
-      "User Message": "...",
-      "List Source": "...csv"
+      "User Message": "Comments must be a, b, or c",
+      "List Source": "DoorCommentsValues.csv"
     }
   ]
 }
