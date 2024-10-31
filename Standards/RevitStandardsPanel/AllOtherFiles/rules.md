@@ -201,21 +201,21 @@ Below are three different requirement rules. These require certain parameters to
       "Categories": ["Roofs"],
       "Parameter Name": "Base Offset From Level",
       "Requirement": "IF {Cutoff Offset} > 0 THEN {Base Offset From Level} > 0",
-      "User Message": "IF {Cutoff Offset} > 0 THEN {Base Offset From Level} > 0",
+      "User Message": "IF {Cutoff Offset} > 0 THEN {Base Offset From Level} > 0"
     },
     {
       "Rule Name": "Window Sill Height",
       "Categories": ["Windows"],
       "Parameter Name": "Sill Height",
       "Requirement": "> {Width}",
-      "User Message": "Sill height must greater than width",
+      "User Message": "Sill height must greater than width"
     },
     {
       "Rule Name": "Door Sill Height",
       "Categories": ["Doors"],
       "Parameter Name": "Sill Height",
       "Requirement": "= 0",
-      "User Message": "Sill height must be 0",
+      "User Message": "Sill height must be 0"
     }
   ]
 }
@@ -321,7 +321,7 @@ Description
     {
       "Rule Name": "Set Quadrant",
       "Element Classes": ["Autodesk.Revit.DB.FamilyInstance"],
-      "Custom Code": "SetQuadrant",
+      "Custom Code": "SetQuadrant"
     },
     {
       "Rule Name": "Sheet Group",
