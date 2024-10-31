@@ -141,8 +141,7 @@ When they have a _Level_ value of:
 }
 ```
 
-### Key Value Rule - (example)
-
+### Key Value Rules
 - The first rule sets some values for Rooms based on the key values defined in the rule configuration below.
 - The second rule uses an external CSV file to provide the list of parameters and values. Note that this relies on a key value being stored in a Global Parameter
 
@@ -170,63 +169,96 @@ When they have a _Level_ value of:
 }
 ```
 
-### Format Rule - (example)
+### Format Rule - Wall Type Name
 
-Description
+The example here requires each Wall Type Name to be constructed out of the values of three of its type parameters. Note that this format requirement is a prefix, so additional values after the format pattern will not invalidate the Type Name.
 
 ```json
 {
   "Parameter Rules": 
   [
     {
+      "Rule Name": "Set Wall Type Function",
+      "Element Classes": ["Autodesk.Revit.DB.WallType"],
+      "Parameter Name": "Type Name",
+      "Format": "{Function} - {Structural Material} - {Width}",
+      "User Message": "Type name does not match required format"
     }
   ]
 }
 ```
 
-### Requirement Rule - (example)
+### Requirement Rules
 
-Description
+Below are three different requirement rules. These require certain parameters to have a specific, mathematical relationship to other parameters of the same element.
 
 ```json
 {
   "Parameter Rules": 
   [
     {
+      "Rule Name": "Roof Offset",
+      "Categories": ["Roofs"],
+      "Parameter Name": "Base Offset From Level",
+      "Requirement": "IF {Cutoff Offset} > 0 THEN {Base Offset From Level} > 0",
+      "User Message": "IF {Cutoff Offset} > 0 THEN {Base Offset From Level} > 0",
+    },
+    {
+      "Rule Name": "Window Sill Height",
+      "Categories": ["Windows"],
+      "Parameter Name": "Sill Height",
+      "Requirement": "> {Width}",
+      "User Message": "Sill height must greater than width",
+    },
+    {
+      "Rule Name": "Door Sill Height",
+      "Categories": ["Doors"],
+      "Parameter Name": "Sill Height",
+      "Requirement": "= 0",
+      "User Message": "Sill height must be 0",
     }
   ]
 }
 ```
 
-### Regex Rule - (example)
+### Regex Rule - Mark is a Number
 
-Description
+This is a simple example of defining a regular expression that the values of a specified parameter must meet - in this case, the Mark must be a number. You can imagine defining a specific pattern for a Project Number, zip code, or phone number as well.
 
 ```json
 {
   "Parameter Rules": 
   [
     {
+      "Rule Name": "Mark is Number",
+      "User Message": "Mark must be a number",
+      "Categories": ["<all>"],
+      "Parameter Name": "Mark",
+      "Regex": "^[0-9]+$"
     }
   ]
 }
 ```
 
-### Formula Rule - (example)
+### Formula Rule - Number of Occupants in a Room
 
-Description
+Mathematical operations can be performed on parameters within the same element. In this example, the _Occupant Load Factor_ (number of occupants per square foot) is multiplied by the _Area_ and the result will be written to the _Occupancy Load_ parameter.
 
 ```json
 {
   "Parameter Rules": 
   [
     {
+      "Rule Name": "Room Occupancy Load",
+      "Categories": ["Rooms"],
+      "Parameter Name": "Occupancy Load",
+      "Formula": "{Occupanct Load Factor} * {Area}"
     }
   ]
 }
 ```
 
-### From Host Instance Rule - (example)
+### From Host Instance Rule
 
 Description
 
@@ -235,12 +267,17 @@ Description
   "Parameter Rules": 
   [
     {
+      "Rule Name": "Insert Orientation = Host Insert",
+      "Categories": ["Doors", "Windows"],
+      "Parameter Name": "Orientation",
+      "From Host Instance": "Orientation",
+      "User Message": "The Orientation of an insert must equal the Orientation of its host"
     }
   ]
 }
 ```
 
-### Prevent Duplicates Rule - (example)
+### Prevent Duplicates Rule
 
 Description
 
@@ -249,6 +286,11 @@ Description
   "Parameter Rules": 
   [
     {
+      "Rule Name": "Room Number Dup",
+      "Categories": ["Rooms"],
+      "User Message": "Room Number cannot duplicate an existing value",
+      "Parameter Name": "Number",
+      "Prevent Duplicates": "True"
     }
   ]
 }
@@ -258,6 +300,7 @@ Description
 - The first custom code rule is simply a Hello World that shows an empty task dialog.
 - The second custom code rule limits the number of in-place families allowed in the project. The limit and the logic are defined in the referenced CS file.
 - The third custom code rule sets the value of a parameter on any family according to where it is in plan. The parameter and the logic are defined in the referenced CS file.
+- The fourth custom code rule sets the value of the Sheet Group parameter on a sheet to the first two characters of the Sheet Number.
 
 ```json
 {
@@ -279,6 +322,12 @@ Description
       "Rule Name": "Set Quadrant",
       "Element Classes": ["Autodesk.Revit.DB.FamilyInstance"],
       "Custom Code": "SetQuadrant",
+    },
+    {
+      "Rule Name": "Sheet Group",
+      "Element Classes": ["Autodesk.Revit.DB.ViewSheet"],
+      "Custom Code": "SheetGroup",
+      "User Message": "Sheet Group parameter set to first two characters of Sheet Number"
     }
   ]
 }
