@@ -235,30 +235,20 @@ Description
 }
 ```
 
-### Custom Code Rule - In-Place Family Max
-- This custom rule limits the number of in-place families allowed in the project
+### Custom Code Rules
+- The first custom code rule limits the number of in-place families allowed in the project. The limit and the logic are defined in the referenced CS file.
+- The second custom code rule sets the value of a parameter on any family according to where it is in plan. The parameter and the logic are defined in the referenced CS file.
 
 ```json
 {
   "Parameter Rules": 
   [
     {
-      "Rule Name": "In Place Family Quantity",
+      "Rule Name": "In Place Family Quantity Limit",
       "Element Classes": ["Autodesk.Revit.DB.FamilyInstance"],
       "Custom Code": "InPlaceFamilyCheck",
       "User Message": "There are too many In-Place Families in the model."
-    }
-  ]
-}
-```
-
-### Custom Code Rule - Set Quadrant
-- This custom rule sets the quadrant of parameter of any family according to where it is in plan.
-
-```json
-{
-  "Parameter Rules":
-  [
+    },
     {
       "Rule Name": "Set Quadrant",
       "Element Classes": ["Autodesk.Revit.DB.FamilyInstance"],
