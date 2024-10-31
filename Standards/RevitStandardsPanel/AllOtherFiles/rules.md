@@ -1,6 +1,8 @@
 # Sample Rule Documentation
 
-## Workset Rule - Levels and Grids
+## Workset Rules
+
+### Levels and Grids
 This rule will enforce keeping Levels and Grids on the default Shared Levels and Grids workset. Notice that when no parameters are specified, all elements of the specified categories are captured by this rule.
 
 ```json
@@ -16,7 +18,7 @@ This rule will enforce keeping Levels and Grids on the default Shared Levels and
 }
 ```
 
-## Workset Rule - Level 1 Stuff (Furniture and Entourage)
+### Level 1 Stuff (Furniture and Entourage)
 Elements from the _Revit Categories_:
 - Furniture
 - Entourage
@@ -43,7 +45,7 @@ When they have a _Level_ value of:
 }
 ```
 
-## Workset Rule - Level 1 Stuff (Walls)
+### Level 1 Stuff (Walls)
 Elements from the _Revit Category_:
 - Walls
 
@@ -73,7 +75,7 @@ And the _Function_ is:
 }
 ```
 
-## Workset Rule - Level 2 Stuff (Furniture and Entourage)
+### Level 2 Stuff (Furniture and Entourage)
 Elements from the _Revit Categories_:
 - Furniture
 - Entourage
@@ -101,15 +103,18 @@ When they have a _Level_ value of:
 }
 ```
 
-## Parameter Rule - Wall Comments List
-- This first rule limits the _Comments_ parameter on all elements in the **Walls** category to values of either 1, 2, or 3
+## Parameter Rules
+
+### List Rules - Wall Comments
+- The first list rule limits the _Comments_ parameter on all elements in the **Walls** category to values of either 1, 2, or 3. The values are enumerated in the rule.
+- The second list rule ... The values are enumerated in an external CSV file.
 
 ```json
 {
   "Parameter Rules": 
   [
     {
-      "Rule Name": "Comments Rule For All Other Files",
+      "Rule Name": "Comments Rule For Walls",
       "Categories": ["Walls"],
       "Parameter Name": "Comments",
       "User Message": "Comments must be 1 2 or 3",
@@ -120,11 +125,117 @@ When they have a _Level_ value of:
         {"name": "3", "description": ""}
       ]
     },
+    {
+      "Rule Name": "... something with a CSV file",
+      "Categories": [],
+      "Parameter Name": "",
+      "Is Value Required": false,
+      "User Message": "...",
+      "List Source": "...csv"
+    }
   ]
 }
 ```
 
-## Parameter Rule - In-Place Family Max
+### Key Value Rule - (example)
+
+Description
+
+```json
+{
+  "Parameter Rules": 
+  [
+    {
+    }
+  ]
+}
+```
+
+### Format Rule - (example)
+
+Description
+
+```json
+{
+  "Parameter Rules": 
+  [
+    {
+    }
+  ]
+}
+```
+
+### Requirement Rule - (example)
+
+Description
+
+```json
+{
+  "Parameter Rules": 
+  [
+    {
+    }
+  ]
+}
+```
+
+### Regex Rule - (example)
+
+Description
+
+```json
+{
+  "Parameter Rules": 
+  [
+    {
+    }
+  ]
+}
+```
+
+### Formula Rule - (example)
+
+Description
+
+```json
+{
+  "Parameter Rules": 
+  [
+    {
+    }
+  ]
+}
+```
+
+### From Host Instance Rule - (example)
+
+Description
+
+```json
+{
+  "Parameter Rules": 
+  [
+    {
+    }
+  ]
+}
+```
+
+### Prevent Duplicates Rule - (example)
+
+Description
+
+```json
+{
+  "Parameter Rules": 
+  [
+    {
+    }
+  ]
+}
+```
+
+### Custom Code Rule - In-Place Family Max
 - This custom rule limits the number of in-place families allowed in the project
 
 ```json
@@ -141,7 +252,7 @@ When they have a _Level_ value of:
 }
 ```
 
-## Parameter Rule - Set Quadrant
+### Custom Code Rule - Set Quadrant
 - This custom rule sets the quadrant of parameter of any family according to where it is in plan.
 
 ```json
