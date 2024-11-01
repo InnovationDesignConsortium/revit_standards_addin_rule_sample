@@ -16,6 +16,13 @@
       ]
     },
     {
+      "PathToStandardsFiles": "/Standards/RevitStandardsPanel/AnnotatedTest",
+      "RvtFullPathRegex": 
+      [
+        "^.*AnnotatedTest.*\\.rvt$"
+      ]
+    },
+    {
       "PathToStandardsFiles": "/Standards/RevitStandardsPanel/AllOtherFiles",
       "RvtFullPathRegex": 
       [
