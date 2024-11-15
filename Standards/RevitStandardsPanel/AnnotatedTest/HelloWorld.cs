@@ -11,7 +11,7 @@ public class HelloWorld
 	// ids = the added or changed elements, or <null> if running the rule on the entire document
 	public IEnumerable<ElementId> Run(Document doc, List<ElementId> ids)
 	{
-		TaskDialog mainDialog = new TaskDialog.Show("Custom Rule");
+		TaskDialog mainDialog = new TaskDialog("Custom Rule");
 		mainDialog.MainInstruction = "Hello World!";
 		mainDialog.MainContent = "This sample shows how to use a Revit task dialog to communicate with the user.";
 		// return the ids of elements that failed the rule, or <null>
