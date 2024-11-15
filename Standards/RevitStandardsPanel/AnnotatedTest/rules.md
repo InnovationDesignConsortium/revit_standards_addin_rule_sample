@@ -260,7 +260,7 @@ Mathematical operations can be performed on parameters within the same element. 
 
 ### From Host Instance Rule
 
-Description
+This rule sets the value of a parameter in a hosted element equal to the value of another parameter in the host element. In this case, the parameters are the orientation of doors and windows.
 
 ```json
 {
@@ -279,7 +279,7 @@ Description
 
 ### Prevent Duplicates Rule
 
-Description
+This rule prevents duplicate values in a parameter for elements of the same, specified category.
 
 ```json
 {
@@ -297,7 +297,7 @@ Description
 ```
 
 ### Custom Code Rules
-- The first custom code rule is simply a Hello World that shows an empty task dialog.
+- The first custom code rule is simply a Hello World that shows an empty task dialog when clicking the "Run" button in the Properties Panel.
 - The second custom code rule limits the number of in-place families allowed in the project. The limit and the logic are defined in the referenced CS file.
 - The third custom code rule sets the value of a parameter on any family according to where it is in plan. The parameter and the logic are defined in the referenced CS file.
 - The fourth custom code rule sets the value of the Sheet Group parameter on a sheet to the first two characters of the Sheet Number.
