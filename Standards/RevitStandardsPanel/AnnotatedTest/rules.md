@@ -43,7 +43,8 @@ When they have a _Level_ value of:
       "Parameters":
       [
         {"Name": "Level", "Value": "Level 1"}
-      ]
+      ],
+      "When Run": ["Save", "SyncToCentral"]
     }
   ]
 }
