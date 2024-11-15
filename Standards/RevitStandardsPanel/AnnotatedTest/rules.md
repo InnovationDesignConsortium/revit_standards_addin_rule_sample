@@ -307,12 +307,12 @@ This rule prevents duplicate values in a parameter for elements of the same, spe
 {
   "Parameter Rules": 
   [
-   {
-      "Rule Name": "Hello World",
-      "Element Classes": ["<all>"],
-      "Custom Code": "HelloWorld",
-      "User Message": "Hello World!"
-    },
+//   {
+//      "Rule Name": "Hello World",
+//      "Element Classes": ["<all>"],
+//      "Custom Code": "HelloWorld",
+//      "User Message": "Hello World!"
+//    },
     {
       "Rule Name": "In Place Family Quantity Limit",
       "Element Classes": ["Autodesk.Revit.DB.FamilyInstance"],
