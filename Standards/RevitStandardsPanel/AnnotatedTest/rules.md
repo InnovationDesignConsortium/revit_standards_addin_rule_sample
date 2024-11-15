@@ -1,4 +1,4 @@
-# Sample Documented Rules File
+# Sample Annotated Rules File
 
 This annotated Rules File is provided to both demonstrate how each rule type is configured _and_ to illustrate how a Rule File can be annotated. All [Github Flavored Markdown](https://github.github.com/gfm/) should be allowed, intersperced between closed JSON code blocks. Multiple code blocks for each of the two types of rules are allowed as long as they are identified as either a "Workset Rules" or a "Parameter Rules" block. Multiple rules are allowed within a block as well - there are some examples of this below.
 
