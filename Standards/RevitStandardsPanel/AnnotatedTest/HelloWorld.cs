@@ -11,7 +11,7 @@ public class HelloWorld
 	// ids = the added or changed elements, or <null> if running the rule on the entire document
 	public IEnumerable<ElementId> Run(Document doc, List<ElementId> ids)
 	{
-		TaskDialog hwDialog = new TaskDialog("Custom Rule", null);
+		TaskDialog hwDialog = new TaskDialog("Custom Rule");
 		hwDialog.MainInstruction = "Hello World!";
 		hwDialog.MainContent = "This sample shows how to use a Revit task dialog to communicate with the user.";
 		hwDialog.Show();
