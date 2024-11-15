@@ -100,15 +100,26 @@
             "PDF":  "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
         },
         {
-            "Name": "Room Tools 1",
+            "Name": "Rooms - Core Placement Parameters",
             "Category": "Rooms",
             "Parameters":
             [    
-                "Occupancy", "Name", "Number", "Room Style"
+                "Name", "Number", "Occupancy", "Room Style", "Department"
             ],
             "Custom Tools":
             [
                 "Place Furniture Instance In Room"
+            ],
+            "URL": "https://help.autodesk.com/view/RVT/2024/ENU/?guid=GUID-DD74A51D-A0B0-4461-A4BA-0F9CCC191CDB",
+            "PDF": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+            "Video": "https://www.youtube.com/watch?v=rStL7niR7gs"
+        },
+        {
+            "Name": "Rooms - Important Reference Parameters",
+            "Category": "Rooms",
+            "Parameters":
+            [    
+                "Level", "Area", "Floor Finish", "Base Finish", "Wall Finish", "Ceiling Finish"
             ]
         }
     ],
@@ -207,11 +218,11 @@
             ]
         },
         {
-            "Name": "Room Stuff",
+            "Name": "Room Placement",
             "Category": "Rooms",
             "Parameter Packs":
             [
-                "Room Tools 1"
+                "Rooms - Core Placement Parameters", "Rooms - Important Reference Parameters"
             ]
         }
     ] 
