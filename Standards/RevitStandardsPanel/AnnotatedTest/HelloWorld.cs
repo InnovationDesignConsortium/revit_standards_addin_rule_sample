@@ -15,8 +15,7 @@ public class HelloWorld
 		TaskDialog mainDialog = new TaskDialog("Custom Rule");
 		mainDialog.MainInstruction = "Hello, World!";
 		mainDialog.MainContent =
-		    "This sample shows how a Revit task dialog can be added to a custom rule."
-			+ "This rule is configured to run when a file is opened.";
+		    "This sample shows how a Revit task dialog can be added to a custom rule. This rule is configured to run when a file is opened.";
 		
 		// Set common buttons and default button. If no CommonButton or CommandLink is added,
 		// task dialog will show a Close button by default
