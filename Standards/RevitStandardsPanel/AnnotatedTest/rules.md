@@ -309,7 +309,7 @@ This rule prevents duplicate values in a parameter for elements of the same, spe
   [
    {
       "Rule Name": "Hello World",
-      "Element Classes": ["Project Information"],
+      "Element Classes": ["Project Info"],
       "Custom Code": "HelloWorld",
       "User Message": "Hello World!",
       "When Run": ["Open"]
