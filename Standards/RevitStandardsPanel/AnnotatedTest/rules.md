@@ -150,8 +150,8 @@ When they have a _Level_ value of:
 {
   "Parameter Rules": 
   [
-  {
-    "Rule Name": "Room Finish Keys",
+    {
+      "Rule Name": "Room Finish Keys",
       "Categories": ["Rooms"],
       "Parameter Name": "Room Style",
       "Driven Parameters": ["Wall Finish", "Floor Finish", "Ceiling Finish"],
