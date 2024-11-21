@@ -13,7 +13,7 @@ public class HelloWorld
 	{
 		TaskDialog hwDialog = new TaskDialog("Custom Rule");
 		hwDialog.MainInstruction = "Hello World!";
-		hwDialog.MainContent = "This sample shows how to use a Revit task dialog to communicate with the user.";
+		hwDialog.MainContent = "This sample shows how to call a Revit task dialog from a custom rule.";
 		hwDialog.Show();
 		
 		// return the ids of elements that failed the rule, or <null>
