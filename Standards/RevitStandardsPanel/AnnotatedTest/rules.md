@@ -253,7 +253,7 @@ Mathematical operations can be performed on parameters within the same element. 
       "Rule Name": "Room Occupancy Load",
       "Categories": ["Rooms"],
       "Parameter Name": "Occupancy Load",
-      "Formula": "{Occupanct Load Factor} * {Area}"
+      "Formula": "{Occupant Load Factor} * {Area}"
     }
   ]
 }
