@@ -243,7 +243,7 @@ This is a simple example of defining a regular expression that the values of a s
 
 ### Formula Rule - Number of Occupants in a Room
 
-Mathematical operations can be performed on parameters within the same element. In this example, the _Occupant Load Factor_ (number of occupants per square foot) is multiplied by the _Area_ and the result will be written to the _Occupancy Load_ parameter.
+Mathematical operations can be performed on parameters within the same element. In this example, the_Area_ is divided by the _Occupant Load Factor_ (number of occupants per square foot) and the result will be written to the _Occupancy Load_ parameter.
 
 ```json
 {
@@ -253,7 +253,7 @@ Mathematical operations can be performed on parameters within the same element. 
       "Rule Name": "Room Occupancy Load",
       "Categories": ["Rooms"],
       "Parameter Name": "Occupancy Load",
-      "Formula": "{Occupant Load Factor} * {Area}"
+      "Formula": "{Area} / {Occupant Load Factor}"
     }
   ]
 }
