@@ -243,7 +243,7 @@ This is a simple example of defining a regular expression that the values of a s
 
 ### Formula Rule - Number of Occupants in a Room
 
-Mathematical operations can be performed on parameters within the same element. In this example, the _Area_ is divided by the _Occupant Load Factor_ (number of occupants per square foot) and the result will be written to the _Occupancy Load_ parameter.
+Mathematical operations can be performed on parameters within the same element. In this example, the built-in _Area_ value is divided by the _Occupant Load Factor_ (maximum floor area allowance per occupant, Data Type: Area) and the result will be written to the _Occupancy Load_ parameter (Data Type: Integer).
 
 ```json
 {
