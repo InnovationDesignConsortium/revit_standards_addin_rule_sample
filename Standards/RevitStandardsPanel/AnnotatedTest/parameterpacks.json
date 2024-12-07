@@ -127,7 +127,7 @@
             "Category": "Rooms",
             "Parameters":
             [
-                "Name", "Area", "Occupancy", "Occupant Load Factor", "Occupant Load"
+                "Name", "Area", "Occupant Load Factor", "Occupant Load"
             ]
         }
     ],
