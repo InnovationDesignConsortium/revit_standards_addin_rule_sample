@@ -121,6 +121,14 @@
             [    
                 "Level", "Area", "Floor Finish", "Base Finish", "Wall Finish", "Ceiling Finish"
             ]
+        },
+        {
+            "Name": "Rooms - Occupancy Load",
+            "Category": "Rooms",
+            "Parameters":
+            [
+                "Name", "Area", "Occupancy", "Occupant Load Factor", "Occupant Load"
+            ]
         }
     ],
     "Pack Sets":
@@ -223,6 +231,14 @@
             "Parameter Packs":
             [
                 "Rooms - Core Placement Parameters", "Rooms - Important Reference Parameters"
+            ]
+        },
+        {
+            "Name": "Room Occupancy",
+            "Category": "Rooms",
+            "Parameter Packs":
+            [
+                "Rooms - Occupancy Load"
             ]
         }
     ] 
